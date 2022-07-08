@@ -22,7 +22,7 @@ const Contact = () => {
                 iaculis eu non diam phasellus. Scelerisque felis imperdiet proin
                 fermentum leo. Amet volutpat consequat mauris nunc congue.
               </p>
-              <div className="social-links">
+              {/* <div className="social-links">
                 <a href="#" className="twitter">
                   <i className="bi bi-twitter" />
                 </a>
@@ -35,7 +35,7 @@ const Contact = () => {
                 <a href="#" className="linkedin">
                   <i className="bi bi-linkedin" />
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="col-lg-3 col-md-4">
@@ -60,10 +60,10 @@ const Contact = () => {
           </div>
           <div className="col-lg-5 col-md-8">
             <form
-              action="forms/contact.php"
-              method="post"
-              role="form"
-              className="php-email-form"
+              // action="forms/contact.php"
+              // method="post"
+              // role="form"
+              // className="php-email-form"
             >
               <div className="form-group">
                 <input
@@ -123,4 +123,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default React.memo(Contact);

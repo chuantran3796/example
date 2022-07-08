@@ -4,15 +4,15 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      class="d-flex flex-column align-items-center justify-content-center"
+      className="d-flex flex-column align-items-center justify-content-center"
     >
       <h1>Hi, I'm Alice!</h1>
       <h2>I am a graphic designer</h2>
-      <a href="#about" class="btn-get-started scrollto">
-        <i class="bi bi-chevron-double-down"></i>
+      <a href="#about" className="btn-get-started scrollto">
+        <i className="bi bi-chevron-double-down"></i>
       </a>
     </section>
   );
 };
 
-export default Hero;
+export default React.memo(Hero);

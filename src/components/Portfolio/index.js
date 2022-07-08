@@ -268,4 +268,4 @@ const Portfolio = (props) => {
 
 Portfolio.propTypes = {};
 
-export default Portfolio;
+export default  React.memo(Portfolio);

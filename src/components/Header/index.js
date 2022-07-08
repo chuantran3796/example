@@ -1,18 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Header = () => {
-  // const [y, setY] = useState(window.scrollY);
-
-  // useEffect(() => {
-  //   window.addEventListener("scroll", (e) => handleNavigation(e));
-  //   return () => {
-  //     // return a cleanup function to unregister our function since its gonna run multiple times
-  //     window.removeEventListener("scroll", (e) => handleNavigation(e));
-  //   };
-  // }, [y]);
-
   const [isScroll, setIsScroll] = useState(false);
-  
+  const [position, setPosition] = useState(window.pageYOffset);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      let moving = window.pageYOffset;
+      setIsScroll(position > moving ? false : true);
+      setPosition(moving);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  });
+
   return (
     <header
       id="header"
@@ -59,11 +62,11 @@ const Header = () => {
               </a>
             </li>
             <li className="dropdown">
-              <a href="#">
+              {/* <a href="#">
                 <span>Drop Down</span> <i className="bi bi-chevron-down" />
-              </a>
+              </a> */}
               <ul>
-                <li>
+                {/* <li>
                   <a href="#">Drop Down 1</a>
                 </li>
                 <li className="dropdown">
@@ -97,7 +100,7 @@ const Header = () => {
                 </li>
                 <li>
                   <a href="#">Drop Down 4</a>
-                </li>
+                </li> */}
               </ul>
             </li>
             <li>

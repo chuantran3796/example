@@ -39,15 +39,17 @@ const About = (props) => {
           <div className="col-xl-7 ps-0 ps-lg-5 pe-lg-1 d-flex align-items-stretch">
             <div className="content d-flex flex-column justify-content-center">
               <h3>{_data?.title}</h3>
-              <p>
-              {_data?.subTitle}
-              </p>
+              <p>{_data?.subTitle}</p>
 
               <div className="row">
                 {_data &&
                   !!_data?.service &&
-                  _data?.service.map((d) => (
-                    <AboutItem title={d?.title} subTitle={d.subTitle} />
+                  _data?.service.map((d, index) => (
+                    <AboutItem
+                      title={d?.title}
+                      subTitle={d.subTitle}
+                      key={index}
+                    />
                   ))}
               </div>
             </div>
