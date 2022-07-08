@@ -5,13 +5,14 @@ const Header = () => {
 
   // useEffect(() => {
   //   window.addEventListener("scroll", (e) => handleNavigation(e));
-
   //   return () => {
   //     // return a cleanup function to unregister our function since its gonna run multiple times
   //     window.removeEventListener("scroll", (e) => handleNavigation(e));
   //   };
   // }, [y]);
+
   const [isScroll, setIsScroll] = useState(false);
+  
   return (
     <header
       id="header"
