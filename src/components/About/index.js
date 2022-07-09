@@ -1,7 +1,7 @@
 import React from "react";
 import AboutItem from "./AboutItem";
 
-const About = (props) => {
+const About = React.forwardRef((props, ref) => {
   const _data = {
     title: "Voluptatem dignissimos provident quasi",
     subTitle:
@@ -31,8 +31,10 @@ const About = (props) => {
       },
     ],
   };
+  // const _ref = useRef(null);
+  // console.log(_ref?.current?.offsetHeight);
   return (
-    <section id="about" className="about">
+    <section id="about" className="about" ref={ref}>
       <div className="container">
         <div className="row no-gutters">
           <div className="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start" />
@@ -58,6 +60,6 @@ const About = (props) => {
       </div>
     </section>
   );
-};
+});
 
 export default About;

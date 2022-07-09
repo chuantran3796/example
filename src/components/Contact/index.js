@@ -1,8 +1,8 @@
 import React from "react";
 
-const Contact = () => {
+const Contact = React.forwardRef((props, ref) => {
   return (
-    <section id="contact" className="contact section-bg">
+    <section id="contact" className="contact section-bg" ref={ref}>
       <div className="container">
         <div className="section-title">
           <h2>Contact</h2>
@@ -60,10 +60,10 @@ const Contact = () => {
           </div>
           <div className="col-lg-5 col-md-8">
             <form
-              // action="forms/contact.php"
-              // method="post"
-              // role="form"
-              // className="php-email-form"
+            // action="forms/contact.php"
+            // method="post"
+            // role="form"
+            // className="php-email-form"
             >
               <div className="form-group">
                 <input
@@ -121,6 +121,6 @@ const Contact = () => {
       </div>
     </section>
   );
-};
+});
 
 export default React.memo(Contact);

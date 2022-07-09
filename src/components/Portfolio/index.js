@@ -1,8 +1,8 @@
 import React from "react";
 
-const Portfolio = (props) => {
+const Portfolio = React.forwardRef((props, ref) => {
   return (
-    <section id="portfolio" className="portfolio section-bg">
+    <section id="portfolio" className="portfolio section-bg" ref={ref}>
       <div className="container">
         <div className="section-title">
           <h2>Portfolio</h2>
@@ -264,8 +264,8 @@ const Portfolio = (props) => {
       </div>
     </section>
   );
-};
+});
 
 Portfolio.propTypes = {};
 
-export default  React.memo(Portfolio);
+export default React.memo(Portfolio);

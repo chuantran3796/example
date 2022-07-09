@@ -1,9 +1,9 @@
 import React from "react";
 import SkillProgress from "./SkillProgress";
 
-const Skills = () => {
+const Skills = React.forwardRef((props, ref) => {
   return (
-    <section id="skills" className="skills section-bg">
+    <section id="skills" className="skills section-bg" ref={ref}>
       <div className="container">
         <div className="section-title">
           <h2>Skills</h2>
@@ -29,6 +29,6 @@ const Skills = () => {
       </div>
     </section>
   );
-};
+});
 
 export default React.memo(Skills);

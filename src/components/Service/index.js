@@ -1,8 +1,8 @@
 import React from "react";
 
-const Service = () => {
+const Service = React.forwardRef((props, ref) => {
   return (
-    <section id="services" className="services section-bg">
+    <section id="services" className="services section-bg" ref={ref}>
       <div className="container">
         <div className="section-title">
           <h2>Services</h2>
@@ -74,6 +74,6 @@ const Service = () => {
       </div>
     </section>
   );
-};
+});
 
 export default React.memo(Service);
