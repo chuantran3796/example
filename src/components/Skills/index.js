@@ -16,13 +16,13 @@ const Skills = React.forwardRef((props, ref) => {
         </div>
         <div className="row skills-content">
           <div className="col-lg-6">
-            <SkillProgress label="HTMl" value={100} />
-            <SkillProgress label="HTMl" value={100} />
-            <SkillProgress label="HTMl" value={100} />
+            <SkillProgress label="HTMl" value={80} />
+            <SkillProgress label="HTMl" value={10} />
+            <SkillProgress label="HTMl" value={40} />
           </div>
           <div className="col-lg-6">
-            <SkillProgress label="HTMl" value={100} />
-            <SkillProgress label="HTMl" value={100} />
+            <SkillProgress label="HTMl" value={50} />
+            <SkillProgress label="HTMl" value={69} />
             <SkillProgress label="HTMl" value={100} />
           </div>
         </div>
