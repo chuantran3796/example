@@ -1,4 +1,5 @@
 import React from "react";
+import ServiceItem from "./ServiceItem";
 
 const Service = React.forwardRef((props, ref) => {
   return (
@@ -14,62 +15,26 @@ const Service = React.forwardRef((props, ref) => {
           </p>
         </div>
         <div className="row">
-          <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div className="icon-box">
-              <div className="icon">
-                <i className="bx bxl-dribbble" />
-              </div>
-              <h4 className="title">
-                <a href>Lorem Ipsum</a>
-              </h4>
-              <p className="description">
-                Voluptatum deleniti atque corrupti quos dolores et quas
-                molestias excepturi
-              </p>
-            </div>
-          </div>
-          <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div className="icon-box">
-              <div className="icon">
-                <i className="bx bx-file" />
-              </div>
-              <h4 className="title">
-                <a href>Sed ut perspiciatis</a>
-              </h4>
-              <p className="description">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore
-              </p>
-            </div>
-          </div>
-          <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div className="icon-box">
-              <div className="icon">
-                <i className="bx bx-tachometer" />
-              </div>
-              <h4 className="title">
-                <a href>Magni Dolores</a>
-              </h4>
-              <p className="description">
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                qui officia
-              </p>
-            </div>
-          </div>
-          <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div className="icon-box">
-              <div className="icon">
-                <i className="bx bx-world" />
-              </div>
-              <h4 className="title">
-                <a href>Nemo Enim</a>
-              </h4>
-              <p className="description">
-                At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                blanditiis
-              </p>
-            </div>
-          </div>
+          <ServiceItem
+            title="Lorem Ipsum"
+            description="Voluptatum deleniti atque corrupti quos dolores et quas
+                molestias excepturi"
+          />
+          <ServiceItem
+            title="Sed ut perspiciatis"
+            description="Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore"
+          />
+          <ServiceItem
+            title="Magni Dolores"
+            description="Excepteur sint occaecat cupidatat non proident, sunt in culpa
+            qui officia"
+          />
+          <ServiceItem
+            title="Nemo Enim"
+            description=" At vero eos et accusamus et iusto odio dignissimos ducimus qui
+            blanditiis"
+          />
         </div>
       </div>
     </section>

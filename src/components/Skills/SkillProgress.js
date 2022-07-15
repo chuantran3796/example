@@ -1,6 +1,6 @@
 import React from "react";
 
-import Progress from "./Progress";
+import ProgressBar from "../ProgressBar";
 
 const SkillProgress = ({ label, value, activeColor }) => {
   return (
@@ -9,9 +9,7 @@ const SkillProgress = ({ label, value, activeColor }) => {
         {label}
         <i className="val">{value}%</i>
       </span>
-      <div className="progress-bar-wrap">
-        <Progress value={value} color={activeColor} />
-      </div>
+      <ProgressBar value={value} activeColor={activeColor} />
     </div>
   );
 };
