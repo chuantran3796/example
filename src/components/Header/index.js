@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 const Header = ({ menus }) => {
   const [isScroll, setIsScroll] = useState(false);
   const [position, setPosition] = useState(window.pageYOffset);
+  const [activeTab, setActiveTab] = useState("home");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,13 +18,13 @@ const Header = ({ menus }) => {
   });
 
   const onScrollSection = (scroll) => {
-    console.log(scroll);
-    // window.scrollTo({
-    //   top: "",
-    //   behavior: "smooth",
-    // });
+    setActiveTab(scroll.tab);
+    window.scrollTo({
+      top: scroll.section.ref.current.offsetTop,
+      behavior: "smooth",
+    });
   };
-  //  Animation  window.scrollTo({})
+  console.log(menus)
   return (
     <header
       id="header"
@@ -44,21 +45,26 @@ const Header = ({ menus }) => {
         </div>
         <nav id="navbar" className="navbar">
           <ul>
-            <li>
+            {/* <li>
               <a className="nav-link scrollto active" href="#hero">
                 Home
               </a>
-            </li>
-            {menus.map((menu) => (
-              <li key={menu.id}>
-                <a
-                  className={"nav-link scrollto"}
-                  href={() => onScrollSection(menu.ref)}
-                >
-                  {menu?.name}
-                </a>
-              </li>
-            ))}
+            </li> */}
+            {menus.map((menu) => {
+              return (
+                <li key={menu.id}>
+                  <a
+                    className={`nav-link scrollto ${
+                      activeTab === menu.tab ? "active" : ""
+                    }`}
+                    href={() => onScrollSection(menu.ref)}
+                    onClick={() => onScrollSection(menu)}
+                  >
+                    {menu?.name}
+                  </a>
+                </li>
+              );
+            })}
           </ul>
           <i className="bi bi-list mobile-nav-toggle" />
         </nav>

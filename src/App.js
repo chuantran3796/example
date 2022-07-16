@@ -19,36 +19,37 @@ function App() {
     {
       id: 2,
       name: "Skills",
-
+      tab: "skills",
       section: <Skills ref={useRef(null)} name="Skills" />,
     },
     {
       id: 3,
       name: "Resume",
-
+      tab: "resume",
       section: <Resume ref={useRef(null)} name="Resume" />,
     },
     {
       id: 4,
       name: "Service",
-
+      tab: "service",
       section: <Service ref={useRef(null)} name="Service" />,
     },
     {
       id: 5,
       name: "Portfolio",
-    
+      tab: "portfolio",
       section: <Portfolio ref={useRef(null)} name="Portfolio" />,
     },
     {
       id: 6,
       name: "Testimonial",
-
+      tab: "testimonial",
       section: <Testimonial ref={useRef(null)} name="Testimonial" />,
     },
     {
       id: 7,
       name: "Contact",
+      tab: "contact",
       section: <Contact ref={useRef(null)} name="Contact" />,
     },
   ];
