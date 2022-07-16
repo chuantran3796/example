@@ -1,15 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const Header = ({ menus }) => {
   const [isScroll, setIsScroll] = useState(false);
-  const [position, setPosition] = useState(window.pageYOffset);
   const [activeTab, setActiveTab] = useState("home");
 
+  const ref = useRef(null);
   useEffect(() => {
     const handleScroll = () => {
-      let moving = window.pageYOffset;
-      setIsScroll(position > moving ? false : true);
-      setPosition(moving);
+      let headerOffset = ref.current.offsetTop;
+      if (headerOffset - window.scrollY <= 0) {
+        setIsScroll(true);
+      } else {
+        setIsScroll(true);
+      }
     };
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -24,9 +27,10 @@ const Header = ({ menus }) => {
       behavior: "smooth",
     });
   };
-  console.log(menus)
+  console.log(menus);
   return (
     <header
+      ref={ref}
       id="header"
       className={`d-flex align-items-center ${isScroll && "fixed-top"}`}
     >

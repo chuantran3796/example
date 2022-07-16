@@ -12,8 +12,15 @@ import Hero from "./components/Hero";
 function App() {
   const _sections = [
     {
+      id: 0,
+      name: "Home",
+      tab: "home",
+      section: <Hero ref={useRef(null)} name="About" />,
+    },
+    {
       id: 1,
       name: "About",
+      tab: "about",
       section: <About ref={useRef(null)} name="About" />,
     },
     {
@@ -55,13 +62,10 @@ function App() {
   ];
   return (
     <React.Fragment>
-      <Hero />
       <Header menus={_sections} />
-      <div id="main">
-        {_sections.map((section) => (
-          <React.Fragment key={section.id}>{section.section}</React.Fragment>
-        ))}
-      </div>
+      {_sections.map((section) => (
+        <React.Fragment key={section.id}>{section.section}</React.Fragment>
+      ))}
       <Footer />
     </React.Fragment>
   );

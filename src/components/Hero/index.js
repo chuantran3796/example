@@ -1,8 +1,9 @@
 import React from "react";
 
-const Hero = () => {
+const Hero = React.forwardRef((props, ref) => {
   return (
     <section
+      ref={ref}
       id="hero"
       className="d-flex flex-column align-items-center justify-content-center"
     >
@@ -13,6 +14,6 @@ const Hero = () => {
       </a>
     </section>
   );
-};
+});
 
 export default React.memo(Hero);
