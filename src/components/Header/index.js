@@ -47,6 +47,7 @@ const Header = ({ menus }) => {
             />
           </a> */}
         </div>
+        {/* navbar navbar navbar-mobile */}
         <nav id="navbar" className="navbar">
           <ul>
             {/* <li>
