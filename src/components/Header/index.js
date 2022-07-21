@@ -27,7 +27,6 @@ const Header = ({ menus }) => {
       behavior: "smooth",
     });
   };
-  console.log(menus);
   return (
     <header
       ref={ref}
